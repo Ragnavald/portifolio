@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronaldo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="scripts/script.js"></script>
+    
+</head>
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="blue-grey darken-3">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#home" class="brand-logo"><img width="30px" src="./img/logo.png">Ronaldo_Ávila</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre Mim</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav blue-grey darken-2 white-text" id="mobile-nav">
+        <li><a href="#home" class="white-text">Início</a></li>
+        <li><a href="#sobre" class="white-text">Sobre Mim</a></li>
+        <li><a href="#projetos" class="white-text">Projetos</a></li>
+        <li><a href="#contato" class="white-text">Contato</a></li>
+    </ul>
+
+    <section id="home" class="section scrollspy" style="background-image: url('https://source.unsplash.com/random/1600x900/?technology,code'); background-size: cover; background-position: center; color: white; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Olá, eu sou <span class="blue-text text-lighten-2">Ronaldo Ávila</span></h1>
+                    <h3><span id="typed-text"></span></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section scrollspy grey lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center">
+                    <h2>Sobre Mim</h2>
+                    <p class="flow-text">
+                        Sou um desenvolvedor apaixonado por criar soluções web incríveis e intuitivas.
+                        Tenho experiência com tecnologias de programação, extração, análise e engenharia de dados.
+                    </p>
+                </div>
+                <div class="col s12 m6 l4 offset-l2 center">
+                    <i class="material-icons large blue-grey-text text-darken-2">code</i>
+                    <h5>Desenvolvimento</h5>
+                    <p>Criação de sites responsivos e performáticos.</p>
+                </div>
+                <div class="col s12 m6 l4 center">
+                    <i class="material-icons large blue-grey-text text-darken-2">devices</i>
+                    <h5>Design Responsivo</h5>
+                    <p>Layouts que se adaptam a qualquer tela.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="projetos" class="section scrollspy">
+    <div class="container">
+        <h2 class="center">Meus Projetos</h2>
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card">
+                            <div class="card-image">
+                                <img src="./img/cripto.png" alt="Projeto Card 1">
+                            </div>
+                            <div class="card-content">
+                                <p>Chatweb com criptografia de ponta a ponta com algorítmo RSA.</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back card blue-grey lighten-5">
+                            <div class="card-content">
+                                <p class="black-text">Recursos:</p>
+                                <ul>
+                                    <li>Frontend: Desenvolvido com bootstrap e javascript.</li>
+                                    <li>Backend: Construído em Go, para gerenciar conexões, troca de chaves e roteamento de mensagens cifradas.</li>
+                                    <li>Criptografia: Implementação de RSA, garantindo a confidencialidade das mensagens.</li>
+                                    <li>WebSockets: Utilizado websockets para comunicação em tempo real e atualizações instantâneas.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://github.com/Ragnavald/Chat-Web-Socket-Go" class="blue-text text-darken-2">Repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card">
+                            <div class="card-image">
+                                <img src="./img/langchain.png" alt="Projeto Card 2">
+                            </div>
+                            <div class="card-content">
+                                <p>O objetivo do projeto é analisar as tendências dos commodities, dados as notícias e indicativos técnicos (médias móvel exponêncial e simples).</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back card blue-grey lighten-5">
+                            <div class="card-content">
+                                <h5 class="card-title black-text">Detalhes</h5>
+                                <p class="black-text">Técnicas de PLN foram empregadas.</p>
+                                 <ul>
+                                    <li class="black-text">- Engenharia de Prompt</li>
+                                    <li class="black-text">- Extração de Informações </li>
+                                    <li class="black-text">- Análise de sentimentos</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://github.com/Ragnavald/NLP" class="blue-text text-darken-2">Repositório</a>
+                                <br>
+                                <a href="https://colab.research.google.com/drive/1KWLIm61-3_sAcvJ1T--aUX0xD6qK3oW8?usp=sharing" class="blue-text text-darken-2">Google Colab</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="section scrollspy grey lighten-4">
+    <div class="container">
+        <h2 class="center">Entre em Contato</h2>
+        <div class="row">
+            <form id="whatsappForm" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="nome" name="nome" type="text" class="validate" required>
+                        <label for="nome">Nome</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" name="email" type="email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="mensagem" name="mensagem" class="materialize-textarea" required></textarea>
+                        <label for="mensagem">Mensagem</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <button class="btn waves-effect waves-light blue-grey darken-2" type="submit" id="submitBtn">Enviar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+                <div id="formMessage" class="center" style="margin-top: 20px; color: green; display: none;"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <footer class="page-footer blue-grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Ronaldo_Ávila</h5>
+                    <p class="grey-text text-lighten-4">Obrigado por visitar!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://br.linkedin.com/in/ronaldoavilajr">LinkedIn</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/Ragnavald">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright blue-grey darken-4">
+            <div class="container center">
+            © 2025 Ronaldo Ávila
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>

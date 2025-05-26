@@ -1,0 +1,152 @@
+/* Ajustes gerais */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Seção Home */
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#home h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.brand-logo{
+    font-size: 20px!important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Efeito de sobreposição para a imagem de fundo da Home (opcional) */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajuste se a navbar tiver altura diferente */
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro */
+    z-index: -1; /* Coloca o overlay atrás do conteúdo, mas na frente da imagem */
+}
+
+#home .container {
+    position: relative; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 1;
+}
+
+
+/* Seção Sobre Mim */
+#sobre .material-icons {
+    margin-bottom: 15px;
+}
+
+/* Seção Projetos */
+#projetos .carousel {
+    height: 400px; /* Ajuste a altura conforme necessário */
+    margin-bottom: 30px;
+}
+
+#projetos .carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+#projetos .card {
+    min-height: 400px; /* Para alinhar a altura dos cards */
+}
+
+/* Ajuste para Sidenav */
+.sidenav li > a {
+    color: white !important; /* Garante que o texto dos links no sidenav seja branco */
+}
+
+.sidenav li > a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* --- Efeito 3D Flip Card --- */
+.flip-card {
+  background-color: transparent;
+  width: 100%; /* Ocupa a largura da coluna do Materialize */
+  height: 420px; /* Defina uma altura fixa para os cards ou ajuste conforme o conteúdo */
+  perspective: 1000px; /* Essencial para o efeito 3D. Define a "profundidade" da cena. */
+  margin-bottom: 30px; /* Espaçamento entre os cards */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s; /* Duração da animação de virada */
+  transform-style: preserve-3d; /* Mantém os elementos filhos no espaço 3D */
+}
+
+
+/* Ao passar o mouse sobre .flip-card, vira o .flip-card-inner */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Vira o card no eixo Y */
+}
+
+/* Estilos para a frente e o verso do card */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Para navegadores Webkit (Chrome, Safari) */
+  backface-visibility: hidden; /* Esconde o lado de trás do elemento quando ele não está virado para o espectador */
+  display: flex; /* Ajuda a alinhar o conteúdo do card do Materialize */
+  flex-direction: column;
+}
+
+.flip-card-front .card, .flip-card-back .card {
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Remove margens padrão do card se .flip-card já cuida disso */
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-card-front .card .card-content,
+.flip-card-back .card .card-content {
+    flex-grow: 1; /* Faz o conteúdo do card ocupar o espaço disponível */
+}
+
+/* O verso do card começa virado */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Ajuste de cor de texto para o verso se necessário */
+.flip-card-back .card-title,
+.flip-card-back p,
+.flip-card-back li {
+    color: #37474f !important; /* Exemplo: azul acinzentado escuro, ajuste conforme seu tema */
+}
+.flip-card-back a {
+    color: #0277bd !important; /* Exemplo: azul mais escuro para links */
+}
+
+.nav-wrapper .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-wrapper .brand-logo img {
+    max-height: 100%;
+    height: auto;
+    width: 30px;
+}
